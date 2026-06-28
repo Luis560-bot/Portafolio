@@ -1,31 +1,40 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import ParticleBackground from './ParticleBackground.jsx'
 import './App.css'
 
 const projects = [
   {
     title: 'Cloud Alert Hub',
-    desc: 'Aplicación web moderna con React y Node.js',
-    tags: ['React', ' .NET', 'PostgreSQL'],
-    link: 'https://github.com/miguelitoelreal/Cloud-Alert-Hub.git',
+    desc: 'Aplicación web moderna con React y Node.js para monitoreo y alertas en la nube.',
+    tags: ['React', '.NET', 'PostgreSQL'],
+    demo: '#',
+    github: 'https://github.com/miguelitoelreal/Cloud-Alert-Hub.git',
+    image: '',
   },
   {
     title: 'Proyecto Dos',
-    desc: 'Dashboard interactivo con visualización de datos',
+    desc: 'Dashboard interactivo con visualización de datos en tiempo real.',
     tags: ['TypeScript', 'D3.js', 'Python'],
-    link: '#',
+    demo: '#',
+    github: '#',
+    image: '',
   },
   {
     title: 'Proyecto Tres',
-    desc: 'E-commerce platform con pagos integrados',
+    desc: 'Plataforma e-commerce con pagos integrados y carrito de compras.',
     tags: ['Next.js', 'Stripe', 'Tailwind'],
-    link: '#',
+    demo: '#',
+    github: '#',
+    image: '',
   },
   {
     title: 'Proyecto Cuatro',
-    desc: 'API RESTful para gestión de contenido',
+    desc: 'API RESTful para gestión de contenido con autenticación y roles.',
     tags: ['Go', 'PostgreSQL', 'Docker'],
-    link: '#',
+    demo: '#',
+    github: '#',
+    image: '',
   },
 ]
 
@@ -86,32 +95,76 @@ function App() {
 
       <section id="projects" className="section">
         <div className="section-inner">
-          <h2 className="section-title">Proyectos</h2>
-          <p className="section-desc">
+          <motion.h2
+            className="section-title"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.5 }}
+          >
+            Proyectos
+          </motion.h2>
+          <motion.p
+            className="section-desc"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
             Algunos de los trabajos que he realizado recientemente.
-          </p>
-          <div className="projects-grid">
+          </motion.p>
+          <div className="projects-list">
             {projects.map((p, i) => (
-              <a key={i} href={p.link} className="project-card" target="_blank" rel="noreferrer">
-                <div className="project-img">
-                  <div className="project-placeholder">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                      <line x1="3" y1="9" x2="21" y2="9" />
-                      <line x1="9" y1="21" x2="9" y2="9" />
-                    </svg>
+              <motion.div
+                key={i}
+                className="project-row"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+              >
+                <div className="project-image-wrapper">
+                  <div className="project-image-bg" />
+                  <div className="project-image">
+                    {p.image ? (
+                      <img src={p.image} alt={p.title} />
+                    ) : (
+                      <div className="project-placeholder">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="2" y="3" width="20" height="14" rx="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                      </div>
+                    )}
                   </div>
                 </div>
-                <div className="project-body">
-                  <h3>{p.title}</h3>
-                  <p>{p.desc}</p>
+                <div className="project-info">
+                  <h3 className="project-title">{p.title}</h3>
+                  <p className="project-desc">{p.desc}</p>
                   <div className="tags">
                     {p.tags.map((t, j) => (
                       <span key={j} className="tag">{t}</span>
                     ))}
                   </div>
+                  <div className="project-links">
+                    <a href={p.demo} className="btn primary" target="_blank" rel="noreferrer">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                      Ver Demo
+                    </a>
+                    <a href={p.github} className="btn secondary" target="_blank" rel="noreferrer">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                      </svg>
+                      GitHub
+                    </a>
+                  </div>
                 </div>
-              </a>
+              </motion.div>
             ))}
           </div>
         </div>
