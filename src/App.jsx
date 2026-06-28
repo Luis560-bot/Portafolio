@@ -4,10 +4,10 @@ import './App.css'
 
 const projects = [
   {
-    title: 'Proyecto Uno',
+    title: 'Cloud Alert Hub',
     desc: 'Aplicación web moderna con React y Node.js',
-    tags: ['React', 'Node.js', 'MongoDB'],
-    link: '#',
+    tags: ['React', ' .NET', 'PostgreSQL'],
+    link: 'https://github.com/miguelitoelreal/Cloud-Alert-Hub.git',
   },
   {
     title: 'Proyecto Dos',
