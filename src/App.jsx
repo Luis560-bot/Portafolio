@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ParticleBackground from './ParticleBackground.jsx'
 import './App.css'
-
+import proyecto_1 from './image/proyecto_1.png'
 const projects = [
   {
     title: 'Cloud Alert Hub',
@@ -10,7 +10,7 @@ const projects = [
     tags: ['React', '.NET', 'PostgreSQL'],
     demo: '#',
     github: 'https://github.com/miguelitoelreal/Cloud-Alert-Hub.git',
-    image: '',
+    image: proyecto_1,
   },
   {
     title: 'Proyecto Dos',
