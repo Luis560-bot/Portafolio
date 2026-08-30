@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import ParticleBackground from "./ParticleBackground.jsx";
 import "./App.css";
 import proyecto_1 from "./image/proyecto_1.png";
@@ -40,18 +40,54 @@ const projects = [
 ];
 
 const skills = [
-  { name: "React", level: 45 },
-  { name: "JavaScript", level: 25 },
-  { name: "TypeScript", level: 2 },
-  { name: "Node.js", level: 10 },
-  { name: "CSS/Sass", level: 5 },
-  { name: "Python", level: 20 },
-  { name: "Git", level: 50 },
-  { name: "SQL", level: 45 },
+  { name: "React", level: 75 },
+  { name: "Node.js", level: 65 },
+  { name: "Express", level: 60 },
+  { name: "SQL", level: 55 },
+  { name: "PostgreSQL", level: 50 },
+  { name: "APIs REST", level: 60 },
+  { name: "JavaScript", level: 70 },
+  { name: "TypeScript", level: 40 },
+  { name: "Python", level: 35 },
+  { name: "Docker", level: 30 },
+  { name: "Git", level: 65 },
+  { name: "CSS/Sass", level: 45 },
 ];
+
+const slideVariants = {
+  enter: (dir) => ({ opacity: 0, x: dir > 0 ? 80 : -80 }),
+  center: { opacity: 1, x: 0 },
+  exit: (dir) => ({ opacity: 0, x: dir > 0 ? -80 : 80 }),
+};
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [skillPage, setSkillPage] = useState(0);
+  const [skillDir, setSkillDir] = useState(1);
+  const [perPage, setPerPage] = useState(4);
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      const next = w < 640 ? 2 : w < 900 ? 3 : 4;
+      setPerPage(next);
+      setSkillPage((p) => Math.min(p, Math.ceil(skills.length / next) - 1));
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  const pageCount = Math.ceil(skills.length / perPage);
+  const skillChunk = skills.slice(
+    skillPage * perPage,
+    skillPage * perPage + perPage
+  );
+
+  const goToSkillPage = (page, dir) => {
+    setSkillDir(dir);
+    setSkillPage(page);
+  };
 
   return (
     <div className="app">
@@ -87,13 +123,14 @@ function App() {
       <section id="hero" className="hero">
         <div className="hero-bg" />
         <div className="hero-content">
-          <span className="badge">Desarrollador Web</span>
+          <span className="badge">Desarrollador Full Stack</span>
           <h1>
             Hola, soy <span className="gradient-text">Luis Alberto</span>
           </h1>
           <p>
-            Creo experiencias digitales modernas y funcionales. Especializado en
-            React, Node.js y el ecosistema JavaScript.
+            Diseño y construyo soluciones digitales de principio a fin: desde el
+            frontend con React hasta el backend con Node.js, bases de datos y
+            APIs.
           </p>
           <div className="hero-actions">
             <a href="#projects" className="btn primary">
@@ -222,23 +259,90 @@ function App() {
         <div className="section-inner">
           <h2 className="section-title">Habilidades</h2>
           <p className="section-desc">
-            Tecnologías con las que trabajo día a día.
+            Tecnologías con las que trabajo a lo largo de todo el stack, del
+            frontend al backend.
           </p>
-          <div className="skills-grid">
-            {skills.map((s, i) => (
-              <div key={i} className="skill-card">
-                <div className="skill-header">
-                  <span className="skill-name">{s.name}</span>
-                  <span className="skill-pct">{s.level}%</span>
-                </div>
-                <div className="skill-bar">
-                  <div
-                    className="skill-fill"
-                    style={{ width: `${s.level}%` }}
+          <div className="carousel">
+            <AnimatePresence mode="wait" custom={skillDir}>
+              <motion.div
+                key={skillPage}
+                className="carousel-track"
+                style={{ gridTemplateColumns: `repeat(${perPage}, 1fr)` }}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                custom={skillDir}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+              >
+                {skillChunk.map((s, i) => (
+                  <div key={i} className="skill-card">
+                    <div className="skill-header">
+                      <span className="skill-name">{s.name}</span>
+                      <span className="skill-pct">{s.level}%</span>
+                    </div>
+                    <div className="skill-bar">
+                      <motion.div
+                        className="skill-fill"
+                        initial={{ width: 0 }}
+                        animate={{ width: `${s.level}%` }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+            <div className="carousel-controls">
+              <button
+                className="carousel-btn"
+                onClick={() => goToSkillPage(skillPage - 1, -1)}
+                disabled={skillPage === 0}
+                aria-label="Habilidades anteriores"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+              <div className="carousel-dots">
+                {Array.from({ length: pageCount }).map((_, i) => (
+                  <button
+                    key={i}
+                    className={`dot ${i === skillPage ? "active" : ""}`}
+                    onClick={() => goToSkillPage(i, i > skillPage ? 1 : -1)}
+                    aria-label={`Ir a la página ${i + 1} de habilidades`}
                   />
-                </div>
+                ))}
               </div>
-            ))}
+              <button
+                className="carousel-btn"
+                onClick={() => goToSkillPage(skillPage + 1, 1)}
+                disabled={skillPage === pageCount - 1}
+                aria-label="Habilidades siguientes"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
