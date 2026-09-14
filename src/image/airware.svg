@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <title>Airware: hacer visible lo invisible</title>
+  <desc>Ilustración conceptual de corrientes de aire, partículas y una hoja sobre una ciudad.</desc>
+  <rect width="800" height="600" rx="24" fill="#DCECF1"/>
+  <circle cx="592" cy="190" r="115" fill="#F9F5D9"/>
+  <path d="M0 464c123-115 207 41 351-27 118-56 198-64 449 23v140H0Z" fill="#C3DCE3"/>
+  <path d="M94 472V359h53v-59h64v172m30 0V386h59v86m273 0V327h63v-39h53v184" stroke="#7EA4AF" stroke-width="2"/>
+  <g stroke="#36677A" stroke-width="3" stroke-linecap="round"><path d="M92 201h331c83 0 83-98 25-98-34 0-45 29-29 45"/><path d="M137 252h430c111 0 111 132 33 132-45 0-62-41-37-65"/><path d="M57 301h277c76 0 76 109 14 109-33 0-47-28-32-46"/><path d="M236 156h73m-151 0h43m397 43h85m-60 53h70M91 351h65"/></g>
+  <g transform="translate(333 280) rotate(-13 89 86)"><path d="M20 159C-17 41 73 4 172 0c9 98-29 176-127 179Z" fill="#88AF80" stroke="#365C49" stroke-width="2"/><path d="M18 192C61 91 130 36 157 14M54 118l-4-58m37 19 53-4m-59 39 64-10" stroke="#365C49" stroke-width="3" stroke-linecap="round"/></g>
+  <g fill="#5136CC"><circle cx="159" cy="225" r="6"/><circle cx="294" cy="276" r="4"/><circle cx="485" cy="227" r="7"/><circle cx="616" cy="424" r="6"/><circle cx="222" cy="331" r="5"/></g>
+  <g transform="translate(503 101) rotate(8)"><rect width="170" height="76" rx="15" fill="#FFFDF8"/><text x="22" y="33" fill="#36677A" font-family="Arial,sans-serif" font-size="22" font-weight="700">PM2.5</text><text x="22" y="55" fill="#597986" font-family="Arial,sans-serif" font-size="12">Entender lo invisible.</text></g>
+  <path d="m99 103 6 15 16 6-16 6-6 16-6-16-16-6 16-6Z" fill="#36677A"/>
+  <text x="42" y="553" fill="#36677A" font-family="Arial,sans-serif" font-size="12" letter-spacing="3">AIRE · DATOS · CONTEXTO</text>
+</svg>

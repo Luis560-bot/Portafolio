@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <title>Cloud Alert Hub: servicios conectados</title>
+  <desc>Ilustración conceptual de una nube que conecta servidores, señales y notificaciones.</desc>
+  <rect width="800" height="600" rx="24" fill="#E7DFFC"/>
+  <circle cx="402" cy="290" r="210" stroke="#C9B9ED" stroke-width="2"/>
+  <circle cx="402" cy="290" r="160" stroke="#C9B9ED" stroke-dasharray="3 12" stroke-width="2"/>
+  <path d="M157 198h93v92h80m323-95H543v95h-58M241 454V347h90m222 111V347h-66" stroke="#8A72C2" stroke-width="3" stroke-dasharray="7 9"/>
+  <g transform="translate(247 179)"><path d="M74 158h151c44 0 65-27 65-59 0-33-25-58-57-60-9-36-38-61-75-61-41 0-71 26-79 62-35-3-65 24-65 57 0 34 26 61 60 61Z" fill="#B7A0EB" transform="translate(0 16)"/><path d="M74 158h151c44 0 65-27 65-59 0-33-25-58-57-60-9-36-38-61-75-61-41 0-71 26-79 62-35-3-65 24-65 57 0 34 26 61 60 61Z" fill="#F9F5FF" stroke="#5136CC" stroke-width="3"/><path d="M72 91h43l19-34 25 64 22-42 12 12h39" stroke="#5136CC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <g transform="translate(90 143) rotate(-9 65 47)"><rect width="130" height="94" rx="15" fill="#5136CC"/><rect x="17" y="20" width="96" height="21" rx="5" fill="#7960DE"/><rect x="17" y="52" width="96" height="21" rx="5" fill="#7960DE"/><circle cx="33" cy="30" r="4" fill="#D5EBAC"/><circle cx="33" cy="62" r="4" fill="#D5EBAC"/><path d="M52 30h42M52 62h42" stroke="#E8DFFA" stroke-width="3"/></g>
+  <g transform="translate(573 130) rotate(10 57 57)"><rect width="114" height="114" rx="23" fill="#D5EBAC" stroke="#7D9360" stroke-width="2"/><path d="M35 74h45l-7-11V46c0-22-31-22-31 0v17l-7 11Z" stroke="#354A33" stroke-width="3"/><path d="M50 83c4 7 12 7 16 0" stroke="#354A33" stroke-width="3" stroke-linecap="round"/><circle cx="87" cy="20" r="13" fill="#5136CC"/><path d="M87 13v8m0 4v1" stroke="#FFF" stroke-width="2" stroke-linecap="round"/></g>
+  <g transform="translate(165 407) rotate(6)"><rect width="172" height="94" rx="14" fill="#FFFDF8"/><path d="M24 62h19l11-18 17 27 17-40 16 25h40" stroke="#5136CC" stroke-width="3" stroke-linejoin="round"/><circle cx="24" cy="21" r="4" fill="#7D9360"/><path d="M38 21h64" stroke="#ADA0CB" stroke-width="4" stroke-linecap="round"/></g>
+  <g transform="translate(498 401) rotate(-7)"><ellipse cx="60" cy="18" rx="60" ry="18" fill="#7E62D8"/><path d="M0 18v63c0 24 120 24 120 0V18" fill="#5136CC"/><ellipse cx="60" cy="18" rx="60" ry="18" fill="#977EE5"/><path d="M0 47c0 24 120 24 120 0m-120 25c0 24 120 24 120 0" stroke="#B8A5EF" stroke-width="2"/></g>
+  <circle cx="400" cy="81" r="9" fill="#5136CC"/><circle cx="668" cy="354" r="6" fill="#5136CC"/>
+  <text x="42" y="553" fill="#5136CC" font-family="Arial,sans-serif" font-size="12" letter-spacing="3">SERVICIOS · SEÑALES · CONEXIONES</text>
+</svg>
