@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <title>Limpio Perú: una ciudad conectada por reportes</title>
+  <desc>Ilustración conceptual de edificios, árboles y un recorrido que conecta una ubicación con un reporte atendido.</desc>
+  <rect width="800" height="600" rx="24" fill="#DDEBCD"/>
+  <circle cx="650" cy="115" r="150" fill="#C8DDB7"/>
+  <path d="M0 484 450 224 800 426v174H0Z" fill="#D1E1BD"/>
+  <path d="m87 406 312-180 310 180-312 181Z" fill="#F6F8EA" stroke="#76977A" stroke-width="2"/>
+  <path d="m180 352 310 179M286 290l310 181M190 466l311-180M295 526l311-180" stroke="#DFE6CE" stroke-width="20"/>
+  <g stroke="#345C49" stroke-width="2" stroke-linejoin="round">
+    <path d="m213 341 68-40 68 40-68 40Z" fill="#8BB59B"/>
+    <path d="M213 341v-99l68 40v99Z" fill="#A9CDB2"/><path d="M281 282v99l68-40v-99Z" fill="#6F9D85"/>
+    <path d="m213 242 68-40 68 40-68 40Z" fill="#F5F7E9"/>
+    <path d="m230 268 17 10v21l-17-10Zm0 37 17 10v21l-17-10Zm37-17 0 22m29-14 19-11v22l-19 11m0 15 19-11v22l-19 11" stroke="#345C49"/>
+    <path d="m429 342 83-48 75 43-83 48Z" fill="#719F83"/>
+    <path d="M429 342V215l75 43v127Z" fill="#E8B596"/><path d="M504 258v127l83-48V210Z" fill="#C99179"/>
+    <path d="m429 215 83-48 75 43-83 48Z" fill="#FCEDDC"/>
+    <path d="m447 248 17 10v22l-17-10Zm0 38 17 10v22l-17-10Zm0 38 17 10v22l-17-10Zm77-51 40-23m-40 58 40-23m-40 58 40-23"/>
+  </g>
+  <path d="m166 410 117 68 110-64 69 40 128-74" stroke="#416E51" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 17"/>
+  <g fill="#345C49"><path d="M151 386v51h6v-51Z"/><ellipse cx="154" cy="371" rx="27" ry="37"/><path d="M610 375v54h6v-54Z"/><ellipse cx="613" cy="359" rx="28" ry="38"/></g>
+  <g fill="#88AD68"><ellipse cx="144" cy="359" rx="20" ry="25"/><ellipse cx="603" cy="347" rx="21" ry="26"/></g>
+  <g transform="translate(320 117)"><path d="M40 0C17 0 0 18 0 40c0 31 40 64 40 64s40-33 40-64C80 18 63 0 40 0Z" fill="#5136CC"/><circle cx="40" cy="38" r="15" fill="#F4F2FA"/></g>
+  <g transform="translate(486 412) rotate(-6)"><rect width="211" height="76" rx="13" fill="#345C49" opacity=".12" transform="translate(0 8)"/><rect width="211" height="76" rx="13" fill="#FFFDF5"/><circle cx="37" cy="38" r="18" fill="#DDEBCD"/><path d="m28 38 6 6 12-13" stroke="#345C49" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="68" y="34" fill="#345C49" font-family="Arial,sans-serif" font-size="14" font-weight="700">Cada reporte</text><text x="68" y="54" fill="#557660" font-family="Arial,sans-serif" font-size="13">tiene un recorrido.</text></g>
+  <path d="m94 167 7 18 19 7-19 7-7 18-7-18-19-7 19-7Z" fill="#5136CC"/>
+  <text x="42" y="553" fill="#345C49" font-family="Arial,sans-serif" font-size="12" letter-spacing="3">CIUDAD · COMUNIDAD · SEGUIMIENTO</text>
+</svg>

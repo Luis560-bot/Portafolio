@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 650" fill="none">
+  <title>Del código a las ideas</title>
+  <desc>Composición de una ventana de código, una órbita, una hoja y un cursor que representa el desarrollo de aplicaciones.</desc>
+  <ellipse cx="326" cy="329" rx="239" ry="252" fill="#DFECCD"/>
+  <ellipse cx="326" cy="329" rx="196" ry="211" stroke="#96B17B" stroke-dasharray="3 11"/>
+  <path d="M75 397c-94-91 181-299 387-243 197 53 91 226-149 312C142 527 74 495 75 445" stroke="#7D60D3" stroke-width="2"/>
+  <g transform="translate(95 183) rotate(-8 197 141)"><rect x="12" y="15" width="395" height="280" rx="19" fill="#32245F"/><rect width="395" height="280" rx="19" fill="#F9F7FF" stroke="#5136CC" stroke-width="3"/><path d="M0 47h395" stroke="#5136CC" stroke-width="2"/><circle cx="25" cy="24" r="5" fill="#E8A48B"/><circle cx="44" cy="24" r="5" fill="#CBDDA9"/><circle cx="63" cy="24" r="5" fill="#C4B6E8"/><path d="m117 100-52 40 52 41m165-81 52 40-52 41m-60-95-44 109" stroke="#5136CC" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/><path d="M66 228h87m21 0h48m21 0h86" stroke="#C7BBDD" stroke-width="7" stroke-linecap="round"/></g>
+  <g transform="translate(391 397) rotate(14)"><path d="m0 0 11 119 32-33 29 43 22-15-29-42 43-13Z" fill="#EDAA90" stroke="#5136CC" stroke-width="3" stroke-linejoin="round"/></g>
+  <g transform="translate(382 69) rotate(13)"><path d="M0 78C-3 14 58-5 110 0c-1 62-31 103-89 95Z" fill="#5136CC"/><path d="M5 115C26 66 63 37 96 15" stroke="#DDECCD" stroke-width="3" stroke-linecap="round"/></g>
+  <g transform="translate(95 443)"><rect width="156" height="75" rx="38" fill="#5136CC"/><path d="m26 39 9 9 20-22" stroke="#DDECCD" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="73" y="45" font-family="Arial,sans-serif" font-size="18" fill="#F9F7FF">crear.</text></g>
+  <path d="m102 121 12 30 31 12-31 12-12 31-12-31-31-12 31-12Z" fill="#EDAA90"/>
+  <circle cx="544" cy="310" r="13" fill="#5136CC"/><circle cx="280" cy="547" r="7" fill="#5136CC"/>
+  <path d="m495 550 25-16m-35-1 6-25m19 56 28 2" stroke="#5136CC" stroke-width="3" stroke-linecap="round"/>
+</svg>
